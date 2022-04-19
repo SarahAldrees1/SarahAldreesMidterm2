@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">SarahAldreesMidterm2</string>
+    <string name="bttnDate">Choose the desired date</string>
+    <string name="name">Name:</string>
+    <string name="surname">Surname:</string>
+    <string name="id">ID:</string>
+    <string name="natID">National ID</string>
+    <string name="bttninsert">INSERT</string>
+    <string name="bttnSecondAct">Go To Second Activity</string>
+    <string name="bttnThirdAct">Go To Third Activity</string>
+</resources>
