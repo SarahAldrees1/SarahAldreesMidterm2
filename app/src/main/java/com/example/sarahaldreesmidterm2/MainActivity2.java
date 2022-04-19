@@ -30,11 +30,7 @@ public class MainActivity2 extends AppCompatActivity {
         final EditText name = (EditText) findViewById(R.id.editTextName);
         final EditText email = (EditText) findViewById(R.id.editTextEmail);
         final EditText natID = (EditText) findViewById(R.id.editTextNatID);
-        //TextView result = (TextView) findViewById(R.id.disp_res);
         final Button add = (Button) findViewById(R.id.bttnAdd);
-        //final Button viewData = (Button) findViewById(R.id.buttonView);
-        //final Button deleteData = (Button) findViewById(R.id.buttonDelete);
-        //final Button searchData = (Button) findViewById(R.id.buttonSearch);
         final Button act1 = (Button) findViewById(R.id.button2);
         final Button act3 = (Button) findViewById(R.id.button3);
         final DatabaseHelper db = new DatabaseHelper(this);
@@ -67,87 +63,5 @@ public class MainActivity2 extends AppCompatActivity {
 
                 startActivity(new Intent(MainActivity2.this,MainActivity3.class));}
         });
-
-        /*viewData.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Cursor cur = db.ViewData();
-                StringBuffer buffer = new StringBuffer();
-
-                while (cur.moveToNext()) {
-
-                    buffer.append("ID: " + cur.getString(0) + "\n");
-                    buffer.append("Name: " + cur.getString(1) + "\n");
-                    buffer.append("Surname: " + cur.getString(2) + "\n");
-                    buffer.append("Phone: " + cur.getString(3) + "\n\n");
-                }
-
-                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity2.this);
-                builder.setCancelable(true);
-                builder.setTitle("All Data");
-                builder.setMessage(buffer.toString());
-                builder.show();
-
-                Toast.makeText(MainActivity2.this, "Successful View", Toast.LENGTH_LONG).show();
-
-            }
-        });*/
-
-        /*deleteData.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                idValue = id.getText().toString();
-                db.DeleteData(idValue);
-
-                Toast.makeText(MainActivity2.this, "Successful Delete", Toast.LENGTH_LONG).show();
-
-            }
-        });*/
-
-        /*searchData.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    idValue = id.getText().toString();
-                    db.getSpecificResult(idValue);
-                } catch (Exception e) {
-                    count = 1;
-                    Toast.makeText(MainActivity2.this, "Unsuccessful Search please insert id", Toast.LENGTH_LONG).show();
-                }
-            }
-        });
-
-        searchData.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                idValue = id.getText().toString();
-
-                if (idValue.equals(""))
-                    Toast.makeText(MainActivity2.this, "make sure id is filled", Toast.LENGTH_SHORT).show();
-
-                else {
-                    Cursor search = db.structuredQuery(idValue);
-
-                    if (search.getCount() == 0) {
-                        Toast.makeText(MainActivity2.this, "no data found", Toast.LENGTH_SHORT).show();
-                    } else {
-                        result.setText("" + search);
-                        System.out.print(search);
-                        Log.d("Sarah", "" + search.getString(0));
-                        id.setText(search.getString(0));
-                        name.setText(search.getString(1));
-                        email.setText(search.getString(2));
-                        natID.setText(search.getString(3));
-//                        pr.setText(search.getString(3));
-                        result.setText("Query: \nID: " + id.getText().toString() +
-                                "\nName: " + name.getText().toString() +
-                                "\nEmail: " + email.getText().toString() +
-                                "\nPhone: " + phone.getText().toString());
-                    }
-                }
-            }
-        });*/
     }
 }
