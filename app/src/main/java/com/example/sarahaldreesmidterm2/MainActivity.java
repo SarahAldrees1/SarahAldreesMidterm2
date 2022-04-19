@@ -2,6 +2,7 @@ package com.example.sarahaldreesmidterm2;
 
 import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -47,11 +48,27 @@ public class MainActivity extends AppCompatActivity {
         reservation =(TextView) findViewById(R.id.datepicked);
         temperature = findViewById(R.id.temperature);
         humidity = findViewById(R.id.humidity);
+        Button activity2=(Button) findViewById(R.id.button);
+        Button activity3=(Button) findViewById(R.id.button2);
 
         buttonDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 new DatePickerDialog(MainActivity.this,d,c.get(Calendar.YEAR),c.get(Calendar.MONTH),c.get(Calendar.DAY_OF_MONTH)).show();
+            }
+        });
+
+        activity2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,MainActivity2.class));
+            }
+        });
+
+        activity3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,MainActivity3.class));
             }
         });
 
