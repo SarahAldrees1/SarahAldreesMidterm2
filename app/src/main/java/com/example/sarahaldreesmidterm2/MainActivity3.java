@@ -36,6 +36,7 @@ public class MainActivity3 extends AppCompatActivity {
         final DatabaseHelper db = new DatabaseHelper(this);
         final Button act1 = (Button) findViewById(R.id.button);
         final Button act2 = (Button) findViewById(R.id.button2);
+        final Button deleteData = (Button) findViewById(R.id.buttonDelete);
 
         viewData.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,6 +60,18 @@ public class MainActivity3 extends AppCompatActivity {
                 builder.show();
 
                 Toast.makeText(MainActivity3.this, "Successful View", Toast.LENGTH_LONG).show();
+
+            }
+        });
+
+        deleteData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                idValue = id.getText().toString();
+                db.DeleteData(idValue);
+
+                Toast.makeText(MainActivity3.this, "Successful Delete", Toast.LENGTH_LONG).show();
 
             }
         });
