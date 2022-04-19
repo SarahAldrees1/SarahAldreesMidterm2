@@ -117,7 +117,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/bttninsert"
+            android:text="@string/btninsert"
             android:textColor="#3F51B5" />
 
     </LinearLayout>
@@ -128,13 +128,13 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_weight="1"
-        android:text="@string/bttnFirstAct" />
+        android:text="@string/btnFirstAct" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/bttnThirdAct" />
+        android:text="@string/btnThirdAct" />
 
 </LinearLayout>

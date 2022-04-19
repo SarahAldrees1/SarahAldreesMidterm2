@@ -5,8 +5,8 @@
     <string name="surname">Surname:</string>
     <string name="id">ID:</string>
     <string name="natID">National ID</string>
-    <string name="bttninsert">INSERT</string>
-    <string name="bttnFirstAct">Go To First Activity</string>
-    <string name="bttnSecondAct">Go To Second Activity</string>
-    <string name="bttnThirdAct">Go To Third Activity</string>
+    <string name="btninsert">INSERT</string>
+    <string name="btnFirstAct">Go To First Activity</string>
+    <string name="btnSecondAct">Go To Second Activity</string>
+    <string name="btnThirdAct">Go To Third Activity</string>
 </resources>
