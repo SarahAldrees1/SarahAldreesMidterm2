@@ -4,6 +4,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -25,11 +26,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         reservation=(TextView) findViewById(R.id.txtReservation);
         Button button=(Button) findViewById(R.id.bttnDate);
+        final Button act2 = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 new DatePickerDialog(MainActivity.this,d,c.get(Calendar.YEAR),c.get(Calendar.MONTH),c.get(Calendar.DAY_OF_MONTH)).show();
             }
+        });
+
+        act2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                startActivity(new Intent(MainActivity.this,MainActivity2.class));}
         });
     }
 
@@ -43,4 +52,5 @@ public class MainActivity extends AppCompatActivity {
             c.set(Calendar.DAY_OF_MONTH, dayOfMonth);
             reservation.setText("You have choosen "+fmtDate.format(c.getTime()));
         }};
+
 }

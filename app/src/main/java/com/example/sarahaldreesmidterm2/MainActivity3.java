@@ -34,7 +34,8 @@ public class MainActivity3 extends AppCompatActivity {
         final Button searchData = (Button) findViewById(R.id.buttonSearch);
         TextView result = (TextView) findViewById(R.id.disp_res);
         final DatabaseHelper db = new DatabaseHelper(this);
-
+        final Button act1 = (Button) findViewById(R.id.button);
+        final Button act2 = (Button) findViewById(R.id.button2);
 
         viewData.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -104,6 +105,20 @@ public class MainActivity3 extends AppCompatActivity {
                     }
                 }
             }
+        });
+
+        act1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                startActivity(new Intent(MainActivity3.this,MainActivity.class));}
+        });
+
+        act2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                startActivity(new Intent(MainActivity3.this,MainActivity2.class));}
         });
     }
 }

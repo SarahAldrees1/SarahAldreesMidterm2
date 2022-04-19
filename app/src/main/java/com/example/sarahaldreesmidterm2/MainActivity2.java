@@ -30,13 +30,13 @@ public class MainActivity2 extends AppCompatActivity {
         final EditText name = (EditText) findViewById(R.id.editTextName);
         final EditText email = (EditText) findViewById(R.id.editTextEmail);
         final EditText natID = (EditText) findViewById(R.id.editTextNatID);
-        TextView result = (TextView) findViewById(R.id.disp_res);
+        //TextView result = (TextView) findViewById(R.id.disp_res);
         final Button add = (Button) findViewById(R.id.bttnAdd);
         //final Button viewData = (Button) findViewById(R.id.buttonView);
-        final Button deleteData = (Button) findViewById(R.id.buttonDelete);
-        final Button searchData = (Button) findViewById(R.id.buttonSearch);
-        final Button act2 = (Button) findViewById(R.id.button);
-        final Button act3 = (Button) findViewById(R.id.button2);
+        //final Button deleteData = (Button) findViewById(R.id.buttonDelete);
+        //final Button searchData = (Button) findViewById(R.id.buttonSearch);
+        final Button act1 = (Button) findViewById(R.id.button2);
+        final Button act3 = (Button) findViewById(R.id.button3);
         final DatabaseHelper db = new DatabaseHelper(this);
 
 
@@ -52,6 +52,20 @@ public class MainActivity2 extends AppCompatActivity {
                 db.AddData(idValue, nameValue, surnameValue, nationalIdValue);
                 Toast.makeText(MainActivity2.this, "Successful Add", Toast.LENGTH_LONG).show();
             }
+        });
+
+        act1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                startActivity(new Intent(MainActivity2.this,MainActivity.class));}
+        });
+
+        act3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                startActivity(new Intent(MainActivity2.this,MainActivity3.class));}
         });
 
         /*viewData.setOnClickListener(new View.OnClickListener() {
@@ -80,7 +94,7 @@ public class MainActivity2 extends AppCompatActivity {
             }
         });*/
 
-        deleteData.setOnClickListener(new View.OnClickListener() {
+        /*deleteData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -90,7 +104,7 @@ public class MainActivity2 extends AppCompatActivity {
                 Toast.makeText(MainActivity2.this, "Successful Delete", Toast.LENGTH_LONG).show();
 
             }
-        });
+        });*/
 
         /*searchData.setOnClickListener(new View.OnClickListener() {
             @Override
